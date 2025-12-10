@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eaeaea;
+}
+
+header h1 {
+    color: #1e3c72;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+header .subtitle {
+    color: #666;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #2a5298;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.endpoints {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.endpoint {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #4CAF50;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.endpoint .method {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+.method.get { background: #4CAF50; }
+.method.post { background: #2196F3; }
+.method.put { background: #FF9800; }
+.method.delete { background: #F44336; }
+
+.endpoint code {
+    background: #f1f1f1;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: #d63384;
+}
+
+.endpoint p {
+    margin-top: 10px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.controls {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.control-group {
+    margin-bottom: 20px;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #2a5298;
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn.get { background: #4CAF50; color: white; }
+.btn.post { background: #2196F3; color: white; }
+.btn.put { background: #FF9800; color: white; }
+.btn.delete { background: #F44336; color: white; }
+
+.response {
+    margin-top: 30px;
+}
+
+#responseOutput {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    min-height: 200px;
+    white-space: pre-wrap;
+}
+
+.notes ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.notes li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.notes li:before {
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eaeaea;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .container { padding: 20px; }
+    header h1 { font-size: 2rem; }
+    .endpoints { grid-template-columns: 1fr; }
+    .buttons { flex-direction: column; }
+    .btn { width: 100%; }
+}

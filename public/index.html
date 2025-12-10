@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Widget (Fake Data) - Express App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Погодный виджет </h1>
+    </header>
+
+    <main>
+        <section class="api-demo">
+            <h2>Описание функционала</h2>
+            <div class="endpoints">
+                <div class="endpoint">
+                    <span class="method get">GET ALL</span>
+                    <code>/api/weather</code>
+                    <p>Получить погоду во всех городах.</p>
+                </div>
+                <div class="endpoint">
+                    <span class="method get">GET CITY</span>
+                    <code>/api/weather/:city</code>
+                    <p>Получить прогноз погоды для конкретного города (например, Москва, Токио и т.п.).</p>
+                </div>
+                <div class="endpoint">
+                    <span class="method post">POST</span>
+                    <code>/api/weather</code>
+                    <p>Добавить новый город и его погоду.</p>
+                </div>
+                <div class="endpoint">
+                    <span class="method put">PUT</span>
+                    <code>/api/weather/:city</code>
+                    <p>Обновить данные о погоде для города.</p>
+                </div>
+                <div class="endpoint">
+                    <span class="method delete">DELETE</span>
+                    <code>/api/weather/:city</code>
+                    <p>Удалить город из базы данных.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interactive">
+            <h2>Функционал</h2>
+            <div class="controls">
+                <div class="control-group">
+                    <label for="cityInput">City Name (for GET, PUT, DELETE):</label>
+                    <input type="text" id="cityInput" placeholder="e.g., london, tokyo">
+                </div>
+                <div class="control-group">
+                    <label for="jsonInput">JSON Data (for POST/PUT):</label>
+                    <textarea id="jsonInput" rows="5" placeholder='{
+  "city": "Paris",
+  "temperature": "+15°C",
+  "condition": "Sunny",
+  "humidity": "70%",
+  "windSpeed": "4 m/s"
+}'></textarea>
+                </div>
+                <div class="buttons">
+                    <button onclick="callApi('GET', '/api/weather')" class="btn get"><i class="fas fa-download"></i> GET All</button>
+                    <button onclick="callApi('GET', '/api/weather/' + document.getElementById('cityInput').value)" class="btn get"><i class="fas fa-search"></i> GET City</button>
+                    <button onclick="callApi('POST', '/api/weather')" class="btn post"><i class="fas fa-plus"></i> POST</button>
+                    <button onclick="callApi('PUT', '/api/weather/' + document.getElementById('cityInput').value)" class="btn put"><i class="fas fa-edit"></i> PUT</button>
+                    <button onclick="callApi('DELETE', '/api/weather/' + document.getElementById('cityInput').value)" class="btn delete"><i class="fas fa-trash"></i> DELETE</button>
+                </div>
+            </div>
+            <div class="response">
+                <h3><i class="fas fa-server"></i> API Response</h3>
+                <pre id="responseOutput">Response will appear here...</pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2025</p>
+
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

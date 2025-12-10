@@ -1,0 +1,37 @@
+{
+  "moscow": {
+    "city": "Moscow",
+    "temperature": "+5°C",
+    "condition": "Cloudy",
+    "humidity": "78%",
+    "windSpeed": "3 m/s"
+  },
+  "london": {
+    "city": "London",
+    "temperature": "+12°C",
+    "condition": "Rainy",
+    "humidity": "92%",
+    "windSpeed": "7 m/s"
+  },
+  "tokyo": {
+    "city": "Tokyo",
+    "temperature": "+18°C",
+    "condition": "Sunny",
+    "humidity": "65%",
+    "windSpeed": "2 m/s"
+  },
+  "new-york": {
+    "city": "New York",
+    "temperature": "+10°C",
+    "condition": "Partly Cloudy",
+    "humidity": "60%",
+    "windSpeed": "5 m/s"
+  },
+  "dubai": {
+    "city": "Dubai",
+    "temperature": "+32°C",
+    "condition": "Clear",
+    "humidity": "45%",
+    "windSpeed": "1 m/s"
+  }
+}
