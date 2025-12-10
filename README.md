@@ -1,4 +1,4 @@
-# Event Feed API
+# Weather API
 
 Express приложение - погодный виджет с фиктивными данными.
 
@@ -36,4 +36,5 @@ GET CITY: <img width="1896" height="965" alt="image" src="https://github.com/use
 POST: <img width="1497" height="912" alt="image" src="https://github.com/user-attachments/assets/0f8acca0-7622-4094-affe-89da4c00368c" />
 PUT: <img width="1467" height="912" alt="image" src="https://github.com/user-attachments/assets/ce768fd7-3d18-4e0d-af72-265e6f778592" />
 DELETE: <img width="1366" height="901" alt="image" src="https://github.com/user-attachments/assets/5c85da02-21ad-416a-b37e-66a3d536a106" />
+
 
